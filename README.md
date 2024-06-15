@@ -7,10 +7,10 @@ The MotoGP API can be broadly divided into two sections:
 - The “Broadcast” API, providing data regarding broadcast events, riders, and seasons.
 
 ### API Calls
-The Results API is a restful API with different endpoints which return JSON metadata about events, seasons, riders, classifications and so on.
+The MotoGP API is a restful API with different endpoints which return JSON metadata about events, seasons, riders, classifications and so on.
 
 ### Base Address
-The base address of the Results API is `https://api.motogp.pulselive.com/motogp/v1`
+The base address of the MotoGP API is `https://api.motogp.pulselive.com/motogp/v1`
 
 ### Requests
 Data resources are accessed via standard HTTP requests in UTF-8 format. The Results API is read only, therefore the only HTTP verb in use is `GET`.
