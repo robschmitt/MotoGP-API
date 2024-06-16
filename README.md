@@ -1035,8 +1035,297 @@ The rider UUID.
 }
 ```
 
-### Get Rider Statistics
-Retrieve a collection of rider statistics, summarised by season.
+### Get Rider Statistics (1/2)
+Retrieve rider statistics.
+
+`GET` `/riders/{legacyId}/stats`
+
+`legacyId` integer **required**\
+The Rider legacy ID
+
+#### Response
+```json
+{
+  "first_grand_prix": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "event": {
+        "id": "c68ece2b-fc82-42b1-a1fb-6a0f4af01d64",
+        "name": "GRAND PRIX OF QATAR",
+        "sponsored_name": "Commercial Bank Grand Prix of Qatar",
+        "short_name": "QAT",
+        "test": false,
+        "season": "2015",
+        ...
+      }
+    },
+    ...
+  ],
+  "podiums": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 35
+      },
+      ...
+    ],
+    "total": 75
+  },
+  "last_wins": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "event": {
+        "id": "c9d2b49e-2b65-4975-9e4a-80d5429cc1b2",
+        "name": "GRAND PRIX OF THE AMERICAS",
+        "sponsored_name": "Red Bull Grand Prix of The Americas",
+        "short_name": "AME",
+        "test": false,
+        "season": "2024",
+        ...
+      }
+    },
+    {
+      "category": {
+        "id": "549640b8-fd9c-4245-acfd-60e4bc38b25c",
+        "legacy_id": 2,
+        "name": "Moto2™"
+      },
+      "event": {
+        "id": "1b869fa9-da9e-4ee5-90c3-fd3e171ad5ae",
+        "name": "MALAYSIAN MOTORCYCLE GRAND PRIX",
+        "sponsored_name": "Shell Advance Malaysian Motorcycle GP",
+        "short_name": "MAL",
+        "test": false,
+        "season": "2014",
+        ...
+      }
+    },
+    ...
+  ],
+  "third_positions": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 14
+      },
+      ...
+    ],
+    "total": 22
+  },
+  "poles": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 15
+      },
+      ...
+    ],
+    "total": 26
+  },
+  "first_podiums": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "event": {
+        "id": "0af4a3a6-99f5-4aaf-bffa-3ace311df40d",
+        "name": "GRAND PRIX DE FRANCE",
+        "sponsored_name": "Monster Energy Grand Prix de France",
+        "short_name": "FRA",
+        "test": false,
+        "season": "2016",
+        ...
+      }
+    },
+    ...
+  ],
+  "second_positions": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 11
+      },
+      ...
+    ],
+    "total": 27
+  },
+  "world_championship_wins": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 0
+      },
+      ...
+    ],
+    "total": 1
+  },
+  "best_positions": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "count": 1
+    },
+    ...
+  ],
+  "best_grid_positions": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "count": 1
+    },
+    ...
+  ],
+  "first_grand_prix_victories": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "event": {
+        "id": "00a3ae01-6c18-4d92-ba15-b3a9bb89e660",
+        "name": "BRITISH GRAND PRIX",
+        "sponsored_name": "Octo British Grand Prix",
+        "short_name": "GBR",
+        "test": false,
+        "season": "2016",
+        ...
+      }
+    },
+    ...
+  ],
+  "race_fastest_laps": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 12
+      },
+      ...
+    ],
+    "total": 24
+  },
+  "best_qualify_positions": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "count": 1
+    },
+    ...
+  ],
+  "grand_prix_victories": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 10
+      },
+      ...
+    ],
+    "total": 26
+  },
+  "all_races": {
+    "categories": [
+      {
+        "category": {
+          "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+          "legacy_id": 3,
+          "name": "MotoGP™"
+        },
+        "count": 167
+      },
+      ...
+    ],
+    "total": 235
+  },
+  "first_race_fastest_lap": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "event": {
+        "id": "4e410e6b-75ef-4180-ad4b-87669009245c",
+        "name": "GRAN PREMI DE CATALUNYA",
+        "sponsored_name": "Gran Premi Monster Energy de Catalunya",
+        "short_name": "CAT",
+        "test": false,
+        "season": "2016",
+        ...
+      }
+    },
+    ...
+  ],
+  "first_pole_positions": [
+    {
+      "category": {
+        "id": "e8c110ad-64aa-4e8e-8a86-f2f152f6a942",
+        "legacy_id": 3,
+        "name": "MotoGP™"
+      },
+      "event": {
+        "id": "d1eb5ec0-d5f2-451f-8eba-34cf83ff725d",
+        "name": "GRAND PRIX OF QATAR",
+        "sponsored_name": "Grand Prix of Qatar",
+        "short_name": "QAT",
+        "test": false,
+        "season": "2017",
+        ...
+      }
+    },
+    ...
+  ]
+}
+```
+
+### Get Rider Statistics (2/2)
+Retrieve rider statistics, summarised by season.
 
 `GET` `/riders/{legacyId}/statistics`
 
@@ -1079,7 +1368,7 @@ The Rider legacy ID
 ## Get Teams
 Retrieve the teams.
 
-`GET` `/teams/categoryUuid={id}&&seasonYear={year}`
+`GET` `/teams/categoryUuid={id}&seasonYear={year}`
 
 `id` string **required**\
 The category UUID.
