@@ -1035,7 +1035,7 @@ The rider UUID.
 }
 ```
 
-### Get Rider Statistics (1/2)
+### Get Rider Statistics
 Retrieve rider statistics.
 
 `GET` `/riders/{legacyId}/stats`
@@ -1324,7 +1324,7 @@ The Rider legacy ID
 }
 ```
 
-### Get Rider Statistics (2/2)
+### Get Rider Statistics by season
 Retrieve rider statistics, summarised by season.
 
 `GET` `/riders/{legacyId}/statistics`
