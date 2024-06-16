@@ -50,9 +50,7 @@ Retrieve a list of MotoGP events for a given season.
 The season UUID.
 
 `isFinished` boolean\
-Retrieve only past events when `true`. Valid values are:
-- `true`
-- `false`
+Retrieve only past events when `true`. Valid values are `true`, `false`.
 
 #### Response
 ```json
@@ -480,7 +478,7 @@ The category UUID.
 }
 ```
 
-### GET Rider qualifying standings (BMW Award)
+### Get Rider qualifying standings (BMW Award)
 Retrieve the qualifying standings.
 
 `GET` `/results/standings/bmwaward?seasonUuid={id}`
