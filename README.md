@@ -17,6 +17,68 @@ Data resources are accessed via standard HTTP requests in UTF-8 format. The Resu
 
 ## Results API
 
+### Live Timing
+Retrieve a timing feed during live sessions.
+
+`GET` `timing-gateway/livetiming-lite`
+
+#### Response
+```json
+  "head": {
+    "championship_id": "3",
+    "category": "MotoGP",
+    "circuit_id": "6",
+    "circuit_name": "Autodromo Internazionale del Mugello",
+    "global_event_id": "",
+    "event_id": "606",
+    "event_tv_name": "Mugello MotoGP Official Test",
+    "event_shortname": "IT1",
+    "date": "03/06/2024",
+    "datet": 20240603,
+    "datst": 20240603,
+    "num_laps": 0,
+    "gmt": "",
+    "trsid": 1,
+    "session_id": "1",
+    "session_type": 4,
+    "session_name": "Session 1",
+    "session_shortname": "FP1",
+    "duration": "288000000",
+    "remaining": "0",
+    "session_status_id": "F",
+    "session_status_name": "F",
+    "date_formated": "10:00 - 03/06/2024",
+    "url": null
+  },
+  "rider": {
+    "1": {
+      "order": 1,
+      "rider_id": 7646,
+      "status_name": "CL",
+      "status_id": "1",
+      "rider_number": "33",
+      "color": "ff6600",
+      "text_color": "ffffff",
+      "pos": 1,
+      "rider_shortname": "Binder",
+      "rider_name": "Brad",
+      "rider_surname": "BINDER",
+      "lap_time": "1'47.617",
+      "num_lap": 5,
+      "last_lap_time": "1'57.459",
+      "last_lap": 17,
+      "trac_status": "B",
+      "team_name": "Red Bull KTM Factory Racing",
+      "bike_name": "KTM",
+      "gap_first": "0.000",
+      "gap_prev": "0.000",
+      "on_pit": true
+    },
+    ...
+  }
+}
+```
+
 ### Get Seasons
 Retrieve a list of MotoGP seasons.
 
