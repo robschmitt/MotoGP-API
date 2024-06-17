@@ -20,7 +20,7 @@ Data resources are accessed via standard HTTP requests in UTF-8 format. The Resu
 ### Live Timing
 Retrieve a timing feed during live sessions.
 
-`GET` `timing-gateway/livetiming-lite`
+`GET` `/timing-gateway/livetiming-lite`
 
 #### Response
 ```json
