@@ -293,7 +293,7 @@ The session UUID.
 ### Get Classification
 Retrieve the classification for a single session.
 
-`GET` `/results/session/{id}/classification?seasonYear={seasonYear}test={isTest}`
+`GET` `/results/session/{id}/classification?seasonYear={seasonYear}&test={isTest}`
 
 `id` string **required**\
 The session UUID.
