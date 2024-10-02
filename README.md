@@ -4,7 +4,7 @@
 The MotoGP API can be broadly divided into two sections:
 
 - The Results API, providing results oriented data, e.g. practice and race sessions, classifications, grid positions, etc.
-- The “Broadcast” API, providing data regarding broadcast events, riders, and seasons.
+- The Broadcast API, providing data about broadcast events, riders, and seasons.
 
 ### API Calls
 The MotoGP API is a restful API with different endpoints which return JSON metadata about events, seasons, riders, classifications and so on.
