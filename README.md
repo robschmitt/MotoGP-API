@@ -1013,7 +1013,7 @@ Retrieve all riders across all categories in the current season.
 ### Get Rider
 Retrieve a single rider.
 
-`GET` `/rider/{id}`
+`GET` `/riders/{id}`
 
 `id` string **required**\
 The rider UUID.
