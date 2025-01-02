@@ -106,7 +106,7 @@ Retrieve a list of MotoGP seasons.
 ### Get Events
 Retrieve a list of MotoGP events for a given season.
 
-`GET` `/results/events/?seasonUuid={id}&isFinished={isFinished}`
+`GET` `/results/events?seasonUuid={id}&isFinished={isFinished}`
 
 `id` string **required**\
 The season UUID.
