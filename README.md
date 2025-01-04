@@ -1427,13 +1427,13 @@ The Rider legacy ID
 ]
 ```
 
-## Get Teams
+### Get Teams
 Retrieve the teams.
 
 `GET` `/teams/categoryUuid={id}&seasonYear={year}`
 
 `id` string **required**\
-The category UUID.
+The broadcast category UUID.
 
 `year` integer **required**\
 The season year. Valid values are `2023`, `2024`, etc.
