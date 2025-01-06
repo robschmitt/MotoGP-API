@@ -146,7 +146,7 @@ Retrieves a list of categories for a given season.
 `GET` `/results/categories?seasonUuid={id}`
 
 `id` string **required**\
-The season UUID.
+The season ID.
 
 #### Response
 ```json
@@ -180,7 +180,7 @@ Retrieves a list of categories for a given event.
 `GET` `/results/categories?eventUuid={id}`
 
 `id` string **required**\
-The season UUID.
+The event ID.
 
 #### Response
 ```json
@@ -214,10 +214,10 @@ Retrieve sessions for a given event.
 `GET` `/results/sessions?eventUuid={eventId}&categoryUuid={categoryId}`
 
 `eventId` string **required**\
-The event UUID.
+The event ID.
 
 `categoryId` string **required**\
-The category UUID.
+The category ID.
 
 #### Response
 ```json
@@ -258,7 +258,7 @@ Retrieve a single session
 `GET` `/results/sessions/{id}`
 
 `id` string **required**\
-The session UUID.
+The session ID.
 
 #### Response
 ```json
@@ -296,7 +296,7 @@ Retrieve the classification for a single session.
 `GET` `/results/session/{id}/classification?seasonYear={seasonYear}&test={isTest}`
 
 `id` string **required**\
-The session UUID.
+The session ID.
 
 `seasonYear` integer\
 The season year. Valid values are `2023`, `2024`, etc. Passing this value seems to have no effect, but may possibly be used for disambiguation where required.
@@ -363,10 +363,10 @@ Retrieve the riders partaking in an event.
 `GET` `/event/{eventId}/entry?categoryUuid={categoryId}`
 
 `eventId` string **required**\
-The event UUID.
+The event ID.
 
 `categoryId` string **required**\
-The category UUID.
+The category ID.
 
 #### Response
 ```json
@@ -421,10 +421,10 @@ Retrieve the grid positions for a single event.
 `GET` `/results/event/{eventId}/category/{categoryId}/grid`
 
 `eventId` string **required**\
-The event UUID.
+The event ID.
 
 `categoryId` string **required**\
-The category UUID.
+The category ID.
 
 #### Response
 ```json
@@ -461,11 +461,11 @@ Retrieve the rider standings.
 
 `GET` `/results/standings?seasonUuid={seasonId}&categoryUuid={categoryId}`
 
-`eventId` string **required**\
-The event UUID.
+`seasonId` string **required**\
+The season ID.
 
 `categoryId` string **required**\
-The category UUID.
+The category ID.
 
 #### Response
 ```json
@@ -516,11 +516,11 @@ Retrieve the official files relating to the standings.
 
 `GET` `/results/standings/files?seasonUuid={seasonId}&categoryUuid={categoryId}`
 
-`seasonUuid` string **required**\
-The season UUID.
+`seasonId` string **required**\
+The season ID.
 
 `categoryId` string **required**\
-The category UUID.
+The category ID.
 
 #### Response
 ```json
@@ -543,10 +543,10 @@ The category UUID.
 ### Get Rider qualifying standings (BMW Award)
 Retrieve the qualifying standings.
 
-`GET` `/results/standings/bmwaward?seasonUuid={id}`
+`GET` `/results/standings/bmwaward?seasonUuid={seasonId}`
 
-`id` string **required**\
-The season UUID.
+`seasonId` string **required**\
+The season ID.
 
 #### Response
 ```json
@@ -599,7 +599,7 @@ The season UUID.
 ### Season categories
 Retrieve all categories for a single season
 
-`GET` `/categories?seasonYear={year}`
+`GET` `/categories?seasonYear={seasonYear}`
 
 `seasonYear` integer **required**\
 The season year. Valid values are `2023`, `2024`, etc.
@@ -633,7 +633,7 @@ The season year. Valid values are `2023`, `2024`, etc.
 ### Get Events
 Retrieves the broadcast events.
 
-`GET` `/events/seasonYear={year}`
+`GET` `/events/seasonYear={seasonYear}`
 
 `seasonYear` integer **required**\
 The season year. Valid values are `2023`, `2024`, etc.
@@ -792,7 +792,7 @@ Retrieve a single broadcast event
 `GET` `/events/{id}`
 
 `id` string **required**\
-The broadcast event Uuid.
+The broadcast event ID.
 
 #### Response
 ```json
@@ -1016,7 +1016,7 @@ Retrieve a single rider.
 `GET` `/riders/{id}`
 
 `id` string **required**\
-The rider UUID.
+The rider ID.
 
 #### Response
 ```json
@@ -1103,7 +1103,7 @@ Retrieve rider statistics.
 `GET` `/riders/{legacyId}/stats`
 
 `legacyId` integer **required**\
-The Rider legacy ID
+The Rider legacy ID.
 
 #### Response
 ```json
@@ -1392,7 +1392,7 @@ Retrieve rider statistics, summarised by season.
 `GET` `/riders/{legacyId}/statistics`
 
 `legacyId` integer **required**\
-The Rider legacy ID
+The Rider legacy ID.
 
 #### Response
 ```json
@@ -1430,12 +1430,12 @@ The Rider legacy ID
 ### Get Teams
 Retrieve the teams.
 
-`GET` `/teams/categoryUuid={id}&seasonYear={year}`
+`GET` `/teams/categoryUuid={categoryId}&seasonYear={seasonYear}`
 
-`id` string **required**\
-The broadcast category UUID.
+`categoryId` string **required**\
+The broadcast category ID.
 
-`year` integer **required**\
+`seasonYear` integer **required**\
 The season year. Valid values are `2023`, `2024`, etc.
 
 #### Note
