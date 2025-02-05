@@ -1430,13 +1430,17 @@ The Rider legacy ID.
 ### Get Teams
 Retrieve the teams.
 
-`GET` `/teams/categoryUuid={categoryId}&seasonYear={seasonYear}`
+`GET` `/teams?categoryUuid={categoryId}&seasonYear={seasonYear}`
 
 `categoryId` string **required**\
 The broadcast category ID.
 
 `seasonYear` integer **required**\
 The season year. Valid values are `2023`, `2024`, etc.
+
+#### Example
+
+https://api.motogp.pulselive.com/motogp/v1/teams?categoryUuid=737ab122-76e1-4081-bedb-334caaa18c70&seasonYear=2025
 
 #### Note
 This is the only known way to get all riders from all seasons, as the `/riders` endpoint only has the riders from the current season.
