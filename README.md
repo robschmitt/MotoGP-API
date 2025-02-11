@@ -22,6 +22,8 @@ Retrieve a timing feed during live sessions.
 
 `GET` `/timing-gateway/livetiming-lite`
 
+🔗 [Direct link to endpoint](https://api.motogp.pulselive.com/motogp/v1/timing-gateway/livetiming-lite)
+
 #### Response
 ```json
   "head": {
