@@ -635,7 +635,7 @@ The season year. Valid values are `2023`, `2024`, etc.
 ### Get Events
 Retrieves the broadcast events.
 
-`GET` `/events/seasonYear={seasonYear}`
+`GET` `/events?seasonYear={seasonYear}`
 
 `seasonYear` integer **required**\
 The season year. Valid values are `2023`, `2024`, etc.
